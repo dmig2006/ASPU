@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title> Справка</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../CSS/file2.css" rel="stylesheet" type="text/css" />
+        <script src="../include/jquery.js"></script>
+        <script src ="../include/Function_1.js"></script>
+    </head>
+    <body>
+        <h1 id="up"> Подсистема "Требуется"</h1>
+        <a href="javascript://0" onclick="slowScroll('#more')" id="backspaceDown"> В конец документа</a> <br/>
+
+        <p> В подсистеме "Требуется" предоставлена возможность создания отчетов на элементы ЗИП, запасы которых необходимо пополнить, по следующим причинам: </p>
+        <ul type = "-">
+            <li class = "hyphen"> элементы должны быть на складе, но в настоящее время их нет в наличии.</li>
+            <li class = "hyphen"> элементы, которые необходимо пополнить, в связи с истекшим сроком годности.</li>
+        </ul>			
+
+        <p> Внешний вид окна с элементами, которых нет в наличии, представлен на рисунке 1:</p>
+        <div class="centrImgBodyAll">
+            <img src = "../images/elementNoItems.jpg" alt = "Элементов нет в наличии"><br>
+            Рисунок 1 - Элементов нет в наличии
+        </div>		
+        <p> Внешний вид окна с элементами с истекшим сроком годност, представлен на рисунке 2:</p>
+        <div class="centrImgBodyAll">
+            <img src = "../images/elementNotRepair.jpg" alt = "Истек срок годности элементов"><br>
+            Рисунок 2 - Истек срок годности элементов
+        </div>
+        <p> 
+            В перечнях элементов выше приведенных окон, имеется поле, наличие галочки в котором, означает необходимость показа помеченных элементов при следующем
+            открытии данных окон, смотри рисунок 3. 
+        </p>
+        <div class="centrImgBodyAll">
+            <img src = "../images/marginDemend.jpg" alt = "Поле"><br>
+            Рисунок 3 - Поле
+        </div>
+        <p> Назначение клавиш: </p>
+        <ol>
+            <li> "<strong>Отменить выделение</strong>" - снять выделение со всех показанных в перечне элементов.</li>
+            <li> "<strong>Выделить</strong>" - Выделение всех показанных в перечне элементов.</li>
+            <li>
+                "<strong>Показать все</strong>" - Вывод на экран всех элементов, количество которых меньше допустимого(для окна рисунка 1) или имеющих вышедший срок 
+                годности(для окна на рисунке 2).
+            </li>
+            <li>
+                "<strong>Отчет</strong>" - отображенный на экране перечень элементов будет выведен на печать. Если в списке нет помеченных галочкой элементов, то в отчете будут
+                выведены все элементы, иначе, только помеченные. 
+            </li>
+            <li>"<strong>Помощь</strong>" - позволяет открыть справку.</li>
+            <li>"<strong>Выход</strong>" - осуществляет выход из окна подсистемы"Требование".</li>
+            <li> <img src = "../images/endSpisok.jpg" alt = "endSpisok"> - для перехода к последней надписи.</li>
+            <li> <img src = "../images/lastNadpis.jpg" alt = "lastNadpis"> - для перехода к предыдущей надписи.</li>
+            <li> <img src = "../images/nextNadpis.jpg" alt = "nextNadpis"> - для перехода к следующей надписи.</li>
+            <li> <img src = "../images/beginSpisok.jpg" alt = "beginSpisok"> - для перехода к первой надписи.</li>
+        </ol>
+        <p> Назначение полей следующие: </p>
+        <ol>
+            <li> "Наименование" - Имя элемента.</li>
+            <li> "Обозначение" - Обозначение элемента.</li>
+            <li> "Дата изг.(дд\мм\гггг)" - дата изготовления элемента.</li>
+            <li> "Срок год.(в месяцах)" - гарантийный срок использования элемента в месяцах.</li>
+            <li> "Макс.кол-во" - максимальное количество элементов.</li>
+            <li> "В наличии" - сколько всего элементов.</li>
+            <li> "Ед.изм." - единицы измерения элемента.</li>
+        </ol>
+
+        <div class="div1"><a href="../Volume 03/volume_10_Acceptance.html" id ="more"> Далее</a></div>
+        <div class="div2"><a href = "workingSystem.html"> Работа с системой</a></div>   
+        <div class="div3"><a href="javascript://0" onclick="slowScroll('#up')" id="backspaceUp"> В начало документа</a></div> 
+    </body>
+</html>

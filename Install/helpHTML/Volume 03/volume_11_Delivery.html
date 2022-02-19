@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title> Справка</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../CSS/file2.css" rel="stylesheet" type="text/css" />
+        <script src="../include/jquery.js"></script>
+        <script src ="../include/Function_1.js"></script>
+    </head>
+    <body>
+        <h1 id="up"> Подсистема "Выдача"</h1>
+        <a href="javascript://0" onclick="slowScroll('#more')" id="backspaceDown"> В конец документа</a> <br/>
+
+        <p> В подсистеме "Выдача" предоставлена возможность учета выданных элементов ЗИП. Внешний вид окна представлен на рисунке 1.</p>		
+        <div class="centrImgBodyAll">
+            <img src = "../images/windowDelivery.jpg" alt = "Подсистема выдача"><br>
+            Рисунок 1 - Подсистема выдача
+        </div>
+
+        <p> Назначение клавиш: </p>
+        <ol>
+            <li> "<strong>Об элементе</strong>" - просмотр полной информации об элементе.</li>
+            <li> 
+                "<strong>Поиск</strong>" - поиск необходимого элемента по атрибутам. При нажатии на этой кнопки станет активным окно поиска 
+                смотри п.3.12 (Подсистема "Поиск").
+            </li>
+            <li> "<strong>Накладная</strong>" - вывод накладной по выданным элементам(становится доступной после выдачи элементов).</li>
+            <li> "<strong>Инф.листок</strong>" - вывод отчета по требуемым элементам(становится доступной после выдачи элементов).</li>
+            <li> "<strong>Начать регистрацию</strong>" - включение функции регистрации штрих-кодов с помощью терминала или вручную.</li>
+            <li> "<strong>Помощь</strong>" - позволяет открыть справку. </li>
+            <li> "<strong>Выход</strong>" - осуществляет выход из окна подсистемы "Выдача". </li>
+        </ol>
+
+        <p> Клавиши управления перечнем требуемых элементов:</p>
+        <ol>
+            <li> <img src = "../images/copyDelivery.jpg" alt = "copy"> - копировать активный элемент в перечень требуемых элементов.</li>
+            <li> <img src = "../images/deleteDelivery.jpg" alt = "copy"> - удалить активный элемент из перечня требуемых элементов.</li>
+            <li> <img src = "../images/deleteAllDelivery.jpg" alt = "copy"> - удалить все элементы из перечня требуемых элементов.</li>
+            <li> <img src = "../images/endSpisok.jpg" alt = "endSpisok"> - для перехода к последней надписи.</li>
+            <li> <img src = "../images/lastNadpis.jpg" alt = "lastNadpis"> - для перехода к предыдущей надписи.</li>
+            <li> <img src = "../images/nextNadpis.jpg" alt = "nextNadpis"> - для перехода к следующей надписи.</li>
+            <li> <img src = "../images/beginSpisok.jpg" alt = "beginSpisok"> - для перехода к первой надписи.</li>
+        </ol>
+        <p> Назначение полей следующее: </p>
+        <ul>
+            <li class="hyphenAll"> "Обозначение" - Обозначение элемента. </li>
+            <li class="hyphenAll"> "Наименование" - Имя элемента. </li>
+            <li class="hyphenAll"> "Кол" - Количество полученных элементов. </li>
+        </ul>
+
+        <p> Для выдачи элементов в системе АСПУ необходимо выполнить следующие действия: </p>
+        <ol>
+            <li> 
+                Из перечня элементов, хранимых в машине, выбрать и занести в перечень требуемых необходимые элементы ЗИП с помощью клавиши управления, 
+                смотри рисунок 2.
+                <div class="centrImgSpisok">
+                    <img src = "../images/kolElementov.jpg" alt = "Колличество затребовших элементов"><br>
+                    Рисунок 2 - Количество затребовших элементов
+                </div>
+            </li>
+            <li> Нажать клавишу "<strong>Начать регистрацию</strong>" для включения функции регистрация штрих-кодов с помощью терминала. </li>
+            <li> 
+                Курсор (мигающая вертикальная линия) должен находится в появившемся окне ввода, где будут отражаться считываемые терминалом штрих-коды,
+                иначе коды элементов не будут зарегистрированы.
+            </li>
+            <li>
+                Считывание терминалом:
+                <ul>
+                    <li class="hyphen"> Подвести терминал к штрих-коду.</li>
+                </ul>
+                Ввод с клавиатуры:
+                <ul>
+                    <li class="hyphen"> Ввести штрих код в поле.</li>
+                    <li class="hyphen"> Нажать на клавиатуре клавишу "<strong>Enter</strong>"</li>
+                </ul>
+                Если количество элементов одного типа больше одного, вводить через терминал или вручную надо на каждый элемент.
+            </li>
+            <li> 
+                Нажать клавишу "<strong>Сохранить</strong>" для записи информации по выданным элементам в систему АСПУ, при этом надо будет ввести данные:
+                <ul>
+                    <li class="hyphen">
+                        ФИО экспедитора, смотри рисунок 3.
+                        <div class="centrImgSpisok">
+                            <img src = "../images/acceptPerson.jpg" alt = "Экспедитор"><br>
+                            Рисунок 3 - Экспедитор
+                        </div>
+                    </li>
+                    <li class="hyphen">
+                        ФИО получателя, смотри рисунок 4.
+                        <div class="centrImgSpisok">
+                            <img src = "../images/acceptPerson.jpg" alt = "Получатель"><br>
+                            Рисунок 4 - Получатель
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li> 
+                Становится доступной клавиша "<strong>Накладная</strong>" для вывода на печать документа о выданных элементах, смотри рисунок 5.
+                <div class="centrImgSpisokAll">
+                    <img src = "../images/nakladnayaDelivery.jpg" alt = "Накладная"><br>
+                    Рисунок 5 - Накладная
+                </div>
+            </li>
+            <li> 
+                Для вывода на печать спсика выданных элементов, нужно нажать клавишу "<strong>Инф.листок</strong>", смотри рисунок 6.
+                <div class="centrImgSpisokAll">
+                    <img src = "../images/infListok.jpg" alt = "Инф.листок"><br>
+                    Рисунок 6 - Инф.листок
+                </div>
+            </li>
+            <li> При необходимости повтора операции выдачи, необходимо выйти в главную форму, и войти в подсистему "Выдача" повторно.</li>
+        </ol>        
+
+        <div class="div1"><a href="../Volume 03/volume_12_Find.html" id ="more"> Далее</a></div>
+        <div class="div2"><a href = "workingSystem.html"> Работа с системой</a></div>   
+        <div class="div3"><a href="javascript://0" onclick="slowScroll('#up')" id="backspaceUp"> В начало документа</a></div> 
+    </body>
+</html>

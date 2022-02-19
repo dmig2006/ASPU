@@ -1,0 +1,4 @@
+PUBLIC CHR(13)
+Error in line 3: Invalid use of a Visual FoxPro function as an array.
+CHR(13)	= Chr(13)
+Error in line 4: Syntax error.

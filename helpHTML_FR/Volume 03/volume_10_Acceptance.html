@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title> Aider</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../CSS/file2.css" rel="stylesheet" type="text/css" />
+        <script src="../include/jquery.js"></script>
+        <script src ="../include/Function_1.js"></script>
+    </head>
+    <body>
+        <h1 id="up"> Sous-systeme "Admission"</h1>	
+        <a href="javascript://0" onclick="slowScroll('#more')" id="backspaceDown"> В конец документа</a> <br/>
+
+        <p> В подсистеме "Прием" предоставлена возможность пополнения элементов ЗИП в машине. Внешний вид окна представлен на рисунке 1.</p>
+        <div class="centrImgBodyAll">
+            <img src = "../images/windowAccept.jpg" alt = "Подсистема прием"><br>
+            Рисунок 1 - Подсистема прием
+        </div>		
+        <p> Назначение кнопок: </p>
+        <ol>
+            <li> <img src = "../images/endSpisok.jpg" alt = "endSpisok"> - для перехода к последней надписи. </li>
+            <li> <img src = "../images/lastNadpis.jpg" alt = "lastNadpis"> - для перехода к предыдущей надписи. </li>
+            <li> <img src = "../images/nextNadpis.jpg" alt = "nextNadpis"> - для перехода к следующей надписи. </li>
+            <li> <img src = "../images/beginSpisok.jpg" alt = "beginSpisok"> - для перехода к первой надписи. </li>
+            <li> <img src = "../images/up.jpg" alt = "up"> - увеличение количества элементов, в случае если принятая информация не верна. </li>
+            <li> <img src = "../images/down.jpg" alt = "down"> - уменьшение количества элементов, в случае если принятая информация не верна. </li>
+            <li> <img src = "../images/delete.jpg" alt = "delete"> - удаление элемента из перечня принятых элементов. </li>
+            <li> "<strong>Накладная</strong>" - вывод накладной по принятым элементам (Становится доступной после приема). </li>
+            <li> "<strong>Инф.листок</strong>" - вывод отчета по элементам показанным в перечне принятых (Становится доступной после приема). </li>
+            <li> "<strong>Сохранить</strong>" - запись принятых элементов в базу данных. </li>
+            <li> "<strong>Помощь</strong>" - позволяет открыть справку. </li>
+            <li> "<strong>Выход</strong>" - осуществляет выход из окна подсистемы "Прием". </li>
+        </ol>
+        <p> Поля: </p>
+        <ol>
+            <li> "Наименование" - Имя элемента. </li>
+            <li> "Обозначение" - Обозначение элемента. </li>
+            <li> "Местоположение" - местоположение элемента в формате с.с.т.щщщ.яяя. Только цифры и '.', смотри пункт 3.5(Подсистема "ЗИП"). </li>
+            <li> "Количество" - Количество полученных элементов. </li>
+        </ol>
+        <p> Для пополнения количества элементов в системе АСПУ необходимо выполнить следующие действия: </p>
+        <ol>
+            <li>	
+                Курсор(мигающая вертикальная линия) должен находиться в окне ввода, где будут отражаться считываемые терминалом штрих-коды, иначе коды элементов не
+                будут занесены в список полученных элементов.	
+            </li>
+            <li>
+                Считывание терминалом:
+                <ul>
+                    <li class="hyphenAll"> Подвести терминал к штрих-коду.</li>
+                    <li class="hyphenAll"> Увидеть что элемент отобразился в поле наименование.</li>
+                </ul>
+                Ввод с клавиатуры:
+                <ul>
+                    <li class="hyphenAll"> Ввести штрих код в поле.</li>
+                    <li class="hyphenAll"> Нажать на клавиатуре клавишу "<strong>Enter</strong>"</li>
+                    <li class="hyphenAll"> Увидеть что элемент отобразился в поле наименование.</li>
+                </ul>
+            </li>
+
+            <li> 
+                Когда все элементы будут зарегистрированы, необходимо нажать кнопку "Сохранить" и информация будет сохранена.После этого откроется окно смотри рисунок 2.
+                <div class="centrImgSpisok"><br/>
+                    <img src = "../images/acceptPerson.jpg" alt = "Экспедитор"><br>
+                    Рисунок 2 - Экспедитор
+                </div>
+            </li>
+            <li> 
+                Становится доступной клавиша "Накладная" для вывода на печать информации о принятых элементах, экспедиторе, принимающем, дате и времени произведенной операции смотри рисунок 3.
+                <div class="centrImgSpisok"><br/>
+                    <img src = "../images/nakladnayaAccept.jpg" alt = "Накладная"><br>
+                    Рисунок 3 - Накладная
+                </div>				
+            </li>
+            <li> 
+                Для вывода на печать перечня принятых элементов, нужно нажать клавишу "Инф.листок", смотри рисунок 4.
+                <div class="centrImgSpisok"><br/>
+                    <img src = "../images/infListok.jpg" alt = "Инф.листок"><br>
+                    Рисунок 4 - Инф.листок
+                </div>
+            </li>
+            <li> При необходимости повтора операции приема, необходимо выйти в главную форму, и войти в подсистему "Прием" повторно.</li>
+        </ol>
+
+        <div class="div1"><a href="../Volume 03/volume_11_Delivery.html" id ="more"> Далее</a></div>
+        <div class="div2"><a href = "workingSystem.html"> Работа с системой</a></div>   
+        <div class="div3"><a href="javascript://0" onclick="slowScroll('#up')" id="backspaceUp"> В начало документа</a></div> 
+    </body>
+</html>

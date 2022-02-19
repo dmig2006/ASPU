@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title> Aider</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../CSS/file2.css" rel="stylesheet" type="text/css" />
+        <script src="../include/jquery.js"></script>
+        <script src ="../include/Function_1.js"></script>
+    </head>
+    <body>
+        <h1 id="up"> Sous-systeme "Exportation \ Importation d'informations par entrepot"</h1>
+        <a href="javascript://0" onclick="slowScroll ('#more')" id="backspaceDown"> В конец документа</a> <br/>
+
+        <p> Данный режим работы реализует функцию загрузки и выгрузки информации по складу. Данная функция нужна для следующего: </p>
+            <ol>
+                <li> Для передачи информации по складу из базы данных одного локального рабочего места в базу данных другого локального рабочего места.</li>
+                <li> Для хранения и аварийного восстановления информации по складу.</li>	
+            </ol>
+        
+        <p> При работе в данном режиме формируются следующие файлы выгрузки: </p>
+        <ol>
+            <li> INFSKLx.DBF - информация об элементе склада х. </li>
+            <li> INFSKLx.FPT - графическое изображение элементов склада х. </li>
+        </ol>
+        
+        <p> Окно подсистемы "Склады" показано на рисунке 1.</p>
+        <div class="centrImgBody"> 
+            <img src = "../images/export_import.jpg" alt = "Окно подсистемы склады"><br>
+            Рисунок 1 - Окно подсистемы склады
+        </div>
+        <p> Поля в данной подсистеме означают следующее: </p>
+        <ol>
+            <li> Поле "Экспорт информации по складу" - Текущая информация базы данных по выбранному складу сохраняется в файлах выгрузки.</li>
+            <li> Поле "Импорт информации по складу" - Информация из файлов выгрузки по выбранному складу загружается в базу данных и становится текущей.</li>
+            <li> Поле "Выбор склад" Названия склада. Есть 4 варианта:
+                <ul>
+                    <li class="hyphen">№ 1 - МТО - П.</li>
+                    <li class="hyphen">№ 2 - МЗИП 1.</li>
+                    <li class="hyphen">№ 3 - МЗИП 2.</li>
+                    <li class="hyphen">№ 4 - База.</li>
+                </ul>
+            </li>
+        </ol>
+        <p> Кнопки в данной подсистеме означают следующее: </P>
+        <ol>
+            <li>Кнопка "<strong>Выполнить</strong>". При нажатии, в завимости от того что выбрано осуществляется ЭКСПОРТ или ИМПОРТ информации по складу.</li>
+            <li>Кнопка "<strong>Отмена</strong>". При нажатии происходит закрытие подсистемы "Склады" и возврат в главное меню. </li>
+        </ol>
+        <p> Рассмотрим как делать экспорт и импорт: </p>
+                <ol class="spisok">
+                <li class="spisok">
+                    Экспорт:
+                    <ol class="spisok">
+                        <li class="spisok"> Выделяем - "Экпорт информации по складу" смотри рисунок 1.</li>
+                        <li class="spisok"> Выбираем какой склад экспортируем.</li>
+                        <li class="spisok"> 
+                            Нажимаем кнопку "<strong>Выполнить</strong>".Если высветилось сообщение - "Папки не существует", то надо нажать кнопку "<strong>Ок</strong>" и повторить экспорт. 
+                            У вас должно появится сообщение - "Информация по складу номер(номер склада) сохранена в (Путь куда сохраняется экпорт файла)".
+                        </li>
+                        <li class="spisok"> Нажать кнопку "<strong>ОК</strong>", при этом произойдет возврат в подсистему "Склады"</li>
+                    </ol>
+                </li>
+                <li class="spisok">
+                    Импорт:
+                    <ol class="spisok">
+                        <li class="spisok"> 
+                            Выделяем - "Импорт информации по складу" смотри рисунок 2.
+                            <div class="centrImgSpisok"><br/>
+                                <img src = "../images/importWindow.jpg" alt = "рисунок 2"><br>
+                                Рисунок 2 - Склады на импорт
+                            </div>
+                        </li>
+                        <li class="spisok"> Выбираем какой склад импортируем.</li>
+                        <li class="spisok"> 
+                            При появление сообщения - "Информация по складу номер(номер склада) не найдена в(Путь к папке Sklad в корне программы)", надо проделать следующее:
+                            <ol class="spisok">
+                                <li class="spisok"> 
+                                    Проверить существования папки Sklad в корне программы, в случае необходимости создать:
+                                    <ul>
+                                        <li class="hyphen">Создать руками
+                                        <ul>
+                                            <li> Пройти в папку куда ставилась программу(по умолчанию - program files(x86)).</li>
+                                            <li> Нажать правой кнопкой мыши на свободном месте в папке.</li>
+                                            <li> Из появившегося подменю создать-папку.</li>
+                                            <li> Ввести имя папки - "Sklad".</li>
+                                        </ul>
+                                        </li>
+                                        <li class="hyphen"> Сделать экспорт склада, тогда папка создатся по умолчанию.</li>
+                                    </ul>
+                                </li>
+                                <li class="spisok"> Проверить существования файлов : InfSkl1,InfSkl2,InfSkl3,InfSkl4 в папке Sklad.</li>
+                                <li class="spisok"> Повторить импорт. </li>
+                                <li class="spisok"> Дождаться сообщения "Информация по складу (№ склада) загружена в базу данных из (Путь к файлу)" смотри рисунок 3.
+                                    <div class="centrImgSpisok"><br/>
+                                        <img src = "../images/messageImport.jpg" alt = "Рисунок 3"><br>
+                                        Рисунок 3 - Сообщение об импорте
+                                    </div>
+                                </li>
+                                <li class="spisok"> Нажать кнопку "<strong>ОК</strong>". При этом произойдет возврат в подсистему "Склады".</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+            </ol>			
+        
+        <div class="div1"><a href="../Volume 03/volume_09_Demand.html" id ="more"> Далее</a></div>
+        <div class="div2"><a href = "workingSystem.html"> Работа с системой</a></div>   
+        <div class="div3"><a href="javascript://0" onclick="slowScroll('#up')" id="backspaceUp"> В начало документа</a></div>  
+    </body>
+</html>

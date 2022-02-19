@@ -1,0 +1,106 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 23.11.2017, 9:35:54
+    Author     : d.o.gusakov
+*/
+@charset "UTF-8";
+
+/*Для тела html*/
+body{
+    background-color:#b8bba4;
+}
+
+/*Прокрутка страницы вконец документа размещение ссылки*/
+#backspaceDown{
+   position: absolute;
+   top: 6%;
+   right: 10px;
+}
+
+/*Прокрутка страницы вверх документа размещение ссылки*/
+#backspaceUp{
+    float:right;
+    position:relative;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/*Заголовок 1 уровня*/
+H1{
+    position: relative;
+    color:#003f53;
+    font-family: Times new Roman;
+    font-size: 24pt;
+    font-weight: BOLD;
+    color:#003f53;
+    text-align: center;
+}
+
+/*Заголовок второго уровня*/
+H2
+{
+    font-family: Times new Roman;
+    font-size: 18pt;
+    font-weight: lighter;	
+    color:#003f53
+}
+
+/*Заголовок 3 уровня*/
+H3
+{
+    font-family: Times new Roman;
+    font-size: 14pt;
+    font-weight: lighter;	
+    color:#003f53
+}
+
+/*Ссылка*/
+A{
+    color:#1a728d;
+    font-family: Times new Roman;
+    font-size: 16pt;
+    text:none;
+    margin-left: 5px;
+}
+A:visited{
+    color:#3a7080;
+}
+A:hover{
+    color:#287b4c;
+}
+
+A.positionSpisok{
+    margin-left: 15px;
+}
+
+/*Нумерованный список для меню*/
+OL
+{
+    list-style:none;
+    counter-reset: li;
+    margin-left: -25px;
+}
+
+/*Элемент списка файла Меню*/
+LI
+{
+    color:#1a728d;
+    font-size: 16pt;
+    margin: 7px;
+}
+LI:before
+{
+    counter-increment: li;
+    content: counters(li, "."); 
+}
+
+div
+{
+    margin-left: 25px;
+    margin-top: -10px;
+}
+

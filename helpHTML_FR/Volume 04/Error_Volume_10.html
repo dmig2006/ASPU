@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title> Aider</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../CSS/file2.css" rel="stylesheet" type="text/css" />
+        <script src="../include/jquery.js"></script>
+        <script src ="../include/Function_1.js"></script>
+    </head>
+    <body>
+        <H1 id="up"> Высветилось сообщение - "Нету файла архива".</H1>
+        <a href="javascript://0" onclick="slowScroll ('#more')" id="backspaceDown">В конец документа</a> <br/>
+        
+        <p> Данное сообщение появляется, если вы распаковываете по умолчанию(Стоит галочка архивы в рабочем каталоге), но архива по умолчанию не создавался, дальнейшие действия:</p>	
+        <ol>
+            <li> Нажмите кнопку "ОК. Для выхода в подменю Архивы баз данных.</li>
+            <li>
+                Скопируйте файл archive.rar в папку - "Archive:"
+                <ul type="-">
+                    <li class="hyphen"> Найдите файл "Archive.rar"
+                        <ul>
+                            <li>
+                                Зайдите в диск С и введите в строку поиск следующее - "archive.rar", смотри рисунок 1.
+                                <div class="centrImgSpisok">
+                                    <img src = "../images/findArchive.jpg" alt = "рисунок 1"> <br>
+                                    Рисунок 1 - Поиск файла archive.rar
+                                </div><br/>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="hyphen">
+                        Скопируйте файл archive.rar в папку "Archive", в корне программы
+                        <ul>
+                            <li> Нажмите правой кнопкой мыши на файле archive.rar.</li>
+                            <li> В появившемся подменю нажмите копировать.</li>
+                            <li> Пройдите в папку программы(При установке по умолчанию программа ставитcя в C:\Program Files (x86)).</li>
+                            <li> Зайдите в папку Archive.</li>
+                            <li> Нажмите правой кнопкой мыши на свободном месте.</li>
+                            <li> В появившемся подменю выберите вставить.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li> Укажите путь куда последний раз делали архив.</li>		
+            <li> Зайдите в программу АСПУ, в подсистему архивы баз данных и извлеките архив.</li>				
+        </ol>
+        <p> Примечание:</p>
+            <ol>
+                <li> Копировать - комбинация клавиш - Ctrl+C.</li>
+                <li> Вставить - Ctrl+V.</li>
+                <li> Пример пути - "C:\Program Files".</li>
+            </ol>
+
+        <div class="div1"><a href="../Volume 04/Error_Volume_11.html" id ="more"> Далее</a></div>
+        <div class="div2"><a href = "ErrorMenu.html"> Возникновение ошибок и действия пользователя</a></div>   
+        <div class="div3"><a href="javascript://0" onclick="slowScroll('#up')" id="backspaceUp"> В начало документа</a></div>
+    </body>
+</html>

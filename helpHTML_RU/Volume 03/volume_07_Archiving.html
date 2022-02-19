@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title> Справка</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../CSS/file2.css" rel="stylesheet" type="text/css" />
+        <script src="../include/jquery.js"></script>
+        <script src ="../include/Function_1.js"></script>
+    </head>
+    <body>
+        <h1 id="up"> Подсистема "Ведение архивов" </h1>
+        <a href="javascript://0" onclick="slowScroll('#more')" id="backspaceDown"> В конец документа</a> <br/>
+
+        <p> 
+            Данный режим работы предназначен для ведения архивов баз данных. Ведение архивной информации необходимо для хранения и аварийного восстановления баз данных. 
+            Внешний вид окна подсистемы "Архивы БД" представлен на рисунке 1.  
+        </p>
+        <div class="centrImgBody"> <br />
+            <img src = "../images/archivingDefault.jpg" alt = "Рисунок 1"> <br>
+            Рисунок 1 - Архивы БД по умолчанию
+        </div>
+        <p> В данной подсистеме возможны следующие действия: </p>
+        <ol class="spisok">
+            <li class="spisok"> 
+                Заархивировать БД в папке по умолчанию. Для этого сделайте следующие действия: 
+                <ol class="spisok">
+                    <li class="spisok"> Выбираем - "Заархивировать базы данных", смотри рисунок 1.</li>
+                    <li class="spisok"> Ставим галочку "Архивы в рабочем каталоге", смотри рисунок 1.</li>
+                    <li class="spisok"> Нажать кнопку "<strong>Выполнить.</strong>"</li>
+                    <li class="spisok"> Дождаться сообщения заархивировано. смотри рисунок 2. 
+                        <div class="centrImgSpisok"> <br />
+                            <img src = "../images/archivingNoDefault.jpg" alt = "Рисунок 2"><br />
+                            Рисунок 2 - Сообщение "Заархивировано"
+                        </div>
+                    </li>
+                    <li class="spisok"> Нажать кнопку "<strong>OK</strong>". После нажатии данной кнопки произойдет возврат к главной форме подсистемы "Архивы БД".</li>
+                </ol>
+            </li>
+            <li class="spisok">
+                Заархивировать БД в выбранной папке. Для этого сделайте следующие действия:
+                <ol class="spisok">
+                    <li class="spisok"> Выбираем - "Заархивировать базы данных", смотри рисунок 3.</li>
+                    <li class="spisok"> Убираем галочку "Архивы в рабочем каталоге", смотри рисунок 3. 
+                        <div class="centrImgSpisok"> <br />
+                            <img src = "../images/archivingNoDefault.jpg" alt = "Рисунок 3"><br>
+                            Рисунок 3 - Архивы БД в выбранной папке
+                        </div>
+                    </li>
+                    <li class="spisok">
+                        Нажать кнопку "<strong>Выполнить.</strong>". После этого откроется окно смотри рисунок 4.
+                        
+                        <div class="centrImgSpisok"> <br />
+                            <img src = "../images/changeDirArchiving.jpg" alt = "Рисунок 4"><br>
+                            Рисунок 4 - Выбор папки сохранения архива
+                        </div>
+                        <ol class="spisok">
+                            <li class="spisok"> Выбрать папку в которую будет сохранятся архив.</li>
+                            <li class="spisok"> Ввести имя архива.</li>
+                            <li class="spisok"> Нажать кнопку "<strong>OK</strong>".</li>
+                            <li class="spisok"> Дождаться сообщения "Заархивировано". смотри рисунок 2.</li>
+                            <li class="spisok"> Нажать кнопку "<strong>OK</strong>". После нажатии данной кнопки произойдет возврат к главной форме подсистемы "Архивы БД". </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li class="spisok">
+                Извлечь архив БД в папку по умолчанию. Для этого сделайте следующее действия:
+                <ol class="spisok">
+                    <li class="spisok"> Выбираем - "Извлечь базы данных из архива", смотри рисунок 5.</li>
+                    <li class="spisok"> Ставим галочку "Архивы в рабочем каталоге", смотри рисунок 5.
+                        <div class="centrImgSpisok"> <br />
+                            <img src = "../images/extractArchivingDefault.jpg" alt = "Рисунок 5"><br>
+                            Рисунок 5 - Извлечение архива БД по умолчанию
+                        </div>
+                    <li class="spisok"> Нажать кнопку "<strong>Выполнить.</strong>"</li>
+                    <li class="spisok"> 
+                        Дождаться сообщения "Распаковано". смотри рисунок 6.
+                        <div class="centrImgSpisok"> <br />
+                            <img src = "../images/messageExtract1.jpg" alt = "Рисунок 6"><br>
+                            Рисунок 6 - Сообщение "Распаковано"
+                        </div>
+                    </li>
+                    <li class="spisok"> Нажать кнопку "<strong>OK</strong>". После нажатии данной кнопки произойдет возврат к главной форме подсистемы "Архивы БД".</li>
+                </ol>
+            </li>
+            <li class="spisok">
+                Извлечь архив БД в выбранную папку. Для этого сделайте следующее:
+                <ol class="spisok">
+                    <li class="spisok"> Выбираем - "Извлечь базы данных из архива", смотри рисунок 7.</li>
+                    <li class="spisok"> Убираем галочку "Архивы в рабочем каталоге", смотри рисунок 7.
+                        <div class="centrImgSpisok"> <br />
+                            <img src = "../images/extractNoDefault.jpg" alt = "Рисунок 7"><br>
+                            Рисунок 7 - Извлечение архива БД в выбранную папку
+                        </div>
+                    </li>
+                    <li class="spisok"> 
+                        Нажать кнопку "<strong>Выполнить.</strong>"После этого откроется окно смотри рисунок 8.
+                        <div class="centrImgSpisok"> <br />
+                            <img src = "../images/changeDirArchivingFile.jpg" alt = "Рисунок 8"><br>
+                            Рисунок 8 - Выбор файла архива
+                        </div>
+                        <ol class="spisok">
+                            <li class="spisok"> 
+                                Выбрать файл архива *.rar.
+                                <ol class="spisok">
+                                    <li class="spisok">
+                                        При создании архива ничего не меняли:
+                                        <ul>
+                                            <li class="hyphenAll"> Заходим в папку программы(по умолчанию C:\Program Files (x86)\ASPU).</li>
+                                            <li class="hyphenAll"> Заходим в папку - Archive.</li>
+                                            <li class="hyphenAll"> Выбираем файл - АСПУ.rar.</li>
+                                            <li class="hyphenAll"> Нажимаем кнопку "<strong>OK</strong>".</li>
+                                        </ul>
+                                    </li>
+                                    <li class="spisok">
+                                        При создании архива изменили путь сохранения архива или имя архива.
+                                        <ul>
+                                            <li class="hyphenAll"> Находим папку в которую сохранили архив.</li>
+                                            <li class="hyphenAll"> Выбираем файл архива *.rar или *.RAR (*-имя которым назвали архив).</li>
+                                            <li class="hyphenAll"> Нажимаем кнопку "<strong>OK</strong>".</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="spisok">
+                                Выбираем папку в которую архив извлекается, смотри рисунок 9.
+                                <div class="centrImgSpisok"> <br />
+                                    <img src = "../images/changeDirExtract.jpg" alt = "Рисунок 9"><br>
+                                    Рисунок 9 - Выбор папки извлечения архива
+                                </div>
+                            </li>
+                            <li class="spisok"> Нажать кнопку Select.</li>
+                            <li class="spisok"> Дождаться сообщения - "Распаковано" смотри рисунок 6.</li>
+                            <li class="spisok"> 
+                                Нажать кнопку "<strong>OK</strong>". После нажатии данной кнопки произойдет возврат к главной форме подсистемы "Архивы БД". 
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>				
+        </ol>
+        <p> <strong>Примечание</strong>: для того чтобы восстановить бд из извлеченного архива, надо проделать следующие действия: </p>
+        <ol>
+            <li> Зайти в папку в которую извлекли архивы(По умолчанию: C:\SGA\Архивы БД).</li>
+            <li> Выделить все файлы *.dbf, *.cdx, *.fpt(выделять - ctrl+A или ctrl+левая кнопка мыши).</li>
+            <li> Нажать правой кнопкой мыши, для открытия подменю.</li>
+            <li> Из выпадшего подменю нажать кнопку "Копировать".</li>
+            <li> Зайти в папку с программой</li>
+            <li> Нажать правой кнопкой мыши на свободном месте.</li>
+            <li> 
+                Из выпавшего подменю нажать вставить, если система спрашивает заменить ли файлы, смотри рисунок 10, ответить - "Копировать с заменой". 
+                <div class="centrImgSpisok"> <br/>
+                    <img src = "../images/CopyZamena.jpg" alt = "Рисунок 10"><br>
+                    Рисунок 10 - Вопрос о копировании с заменой
+                </div>
+            </li>       
+        </ol>                           
+        <p> CTRL+C - Копировать, CTRL+V - вставить.</p>
+        
+        <div class="div1"><a href="../Volume 03/volume_08_ExportImport.html" id ="more"> Далее</a></div>
+        <div class="div2"><a href = "workingSystem.html"> Работа с системой</a></div>   
+        <div class="div3"><a href="javascript://0" onclick="slowScroll('#up')" id="backspaceUp"> В начало документа</a></div>  
+    </body>
+</html>

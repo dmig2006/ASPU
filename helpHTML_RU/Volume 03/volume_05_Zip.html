@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title> Справка</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../CSS/file2.css" rel="stylesheet" type="text/css" />
+        <script src="../include/jquery.js"></script>
+        <script src ="../include/Function_1.js"></script>
+    </head>
+    <body>
+        <h1 id="up"> Подсистема "ЗИП"</h1>
+        <a href="javascript://0" onclick="slowScroll ('#more')" id="backspaceDown">В конец документа</a> <br/>
+        
+        <p> Данный режим предоставляет возможность просмотра полной информации об элементах ЗИП-Г. Режим активизируется путем нажатия кнопки "<strong>ЗИП</strong>"
+            главное формы АСПУ. При входе в подсистему просмотра базы данных на экране отоброзится окно "Элементы группового комплекта ЗИП", внешний вид которого представлен на рисунке 1.
+        </p>
+        <div class="centrImgBodyAll">
+            <img src = "../images/groupElements.jpg" alt = "Элементы ЗИП"><br>
+            Рисунок 1 - Элементы ЗИП
+        </div>
+        <p> В представленном окне отображается полная информация о текущем элементе ЗИП-Г</p>
+        <p> Назначение полей:</p>
+        <ol>
+            <li> "Наименование" - полное наименование элемента.</li>
+            <li> "Штрих-код" - штриховой код элемента.</li>
+            <li> "Обозначение" - обозначение элемента.</li>
+            <li> "Комплект" - комплект, к которому он принадлежит.</li>
+            <li> "Местоположение" - расположение элемента в формате С.С.Т.ЩЩЩ.ЯЯЯ. где:
+                <ul>
+                    <li class="hyphenAll"> С - номер склада.</li>
+                    <li class="hyphenAll"> С - номер стеллажа (шкаф).</li>
+                    <li class="hyphenAll"> Т - номер тумбочки.</li>
+                    <li class="hyphenAll"> ЩЩЩ - номер ящика.</li>
+                    <li class="hyphenAll"> ЯЯЯ - номер ячейки.</li>
+                </ul>
+            </li>
+            <li> "Склад" - наименование склада, где находится элемент ЗИП.</li>
+            <li> "Габариты" - габаритные размеры элемента.</li>
+            <li> "Дата изготовления" - дата изготовления элемента.</li>
+            <li> "Срок годности(в месяцах)" - гарантийный срок использования элемента в месяцах.</li>
+            <li> "Количество(имеющееся)" - количество элементов, имеющееся в наличии.</li>
+            <li> "Количество(максимальное)" - максимальное количество элементов, которое возможно разместить в машине.</li>
+            <li> "Единицы измерения" - информация о единицах измерения (шт., м., кг.), которым измеряется количество элементов.</li>
+            <li> "Примечание" - дополнительная информация об элементе (в том числе информация об особых условиях хранения).</li>
+        </ol>
+        <p> Назначение кнопок:</p>
+        <ol>
+            <li><img src = "../images/endSpisok.jpg" alt = "endSpisok"> - Для перехода к последнему элементу</li>
+            <li><img src = "../images/lastNadpis.jpg" alt = "lastNadpis"> - Для перехода к предыдущему элементу</li>
+            <li><img src = "../images/nextNadpis.jpg" alt = "nextNadpis"> - Для перехода к следующему элементу</li>
+            <li><img src = "../images/beginSpisok.jpg" alt = "beginSpisok"> - Для перехода к первому элементу</li>
+            <li>
+                Кнопка "<strong>Отчет</strong>". При нажатии будет открыто окно для печати документа, печатная форма которого представлена на рисунке 2.
+                <div class="centrImgSpisok"> <br/>
+                    <img src = "../images/printOtchet.jpg" alt = "Окно печати документа"> <br>
+                    Рисунок 2 - Окно печати документа
+                </div>
+            </li>
+            <li> 
+                Кнопка "<strong>Поиск</strong>".При нажатии открывается окно подсистемы "Поиск", которая предоставляется возможность быстрого перемещения к искомому элементу. Порядок работы описан в п.3.12(Подсистема поиск)
+            </li>
+            <li> Кнопка "<strong>Помощь</strong>". При нажатии откроется справка.</li>
+            <li> Кнопка "<strong>Выход"</strong>". При нажатии осуществляется выход из под системы ЗИП.</li>
+        </ol>
+    
+        <div class="div1"><a href="../Volume 03/volume_06_Revision.html" id ="more"> Далее</a></div>
+        <div class="div2"><a href = "workingSystem.html"> Работа с системой</a></div>   
+        <div class="div3"><a href="javascript://0" onclick="slowScroll('#up')" id="backspaceUp"> В начало документа</a></div>
+        
+    </body>
+</html>
